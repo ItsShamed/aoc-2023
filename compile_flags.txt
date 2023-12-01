@@ -1,0 +1,6 @@
+-Wall
+-Wextra
+-Wvla
+-Werror
+-std=c99
+-pedantic
