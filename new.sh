@@ -9,7 +9,7 @@ mkdir "$1"
 mkdir "$1/inputs"
 touch "$1/inputs/.gitkeep"
 
-echo "		 day1_2 \" >> dirs.mk
+echo "		 $1 \\" >> dirs.mk
 
 cat <<EOF > "$1/submission.c"
 #include "boilerplate.h"
