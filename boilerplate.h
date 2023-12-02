@@ -9,7 +9,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-
 void process_line(char *str);
 void finish(void);
 
@@ -34,7 +33,7 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    FILE *file  = fopen(argv[1], "r");
+    FILE *file = fopen(argv[1], "r");
     if (!file)
     {
         warnx("Could not open file: %s", strerror(errno));

@@ -1,7 +1,7 @@
-#include "boilerplate.h"
-
 #include <ctype.h>
 #include <stdbool.h>
+
+#include "boilerplate.h"
 
 static unsigned int value = 0;
 
