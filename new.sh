@@ -12,6 +12,8 @@ touch "$1/inputs/.gitkeep"
 echo "		 $1 \\" >> dirs.mk
 
 cat <<EOF > "$1/submission.c"
+#define _POSIX_C_SOURCE 200809L
+
 #include "boilerplate.h"
 
 void process_line(char *str)
