@@ -1,6 +1,8 @@
-#include "boilerplate.h"
+#define _POSIX_C_SOURCE 200809L
 
 #include <stdbool.h>
+
+#include "boilerplate.h"
 
 #define MAX_RED 12
 #define MAX_GREEN 13
@@ -55,7 +57,7 @@ static inline void check_pick(char *str, struct counts *counts)
     }
 
     unsigned int count = atoi(data);
-    
+
     data = strtok_r(NULL, " ", &saveptr);
 
     if (streq(data, red))
@@ -67,7 +69,6 @@ static inline void check_pick(char *str, struct counts *counts)
     else
         warnx("unknown object '%s'", data);
 }
-
 
 static inline void check_set(char *set_data, struct counts *counts)
 {

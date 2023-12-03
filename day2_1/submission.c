@@ -1,6 +1,8 @@
-#include "boilerplate.h"
+#define _POSIX_C_SOURCE 200809L
 
 #include <stdbool.h>
+
+#include "boilerplate.h"
 
 #define MAX_RED 12
 #define MAX_GREEN 13
@@ -47,7 +49,7 @@ static inline bool check_pick(char *str)
     }
 
     unsigned int count = atoi(data);
-    
+
     data = strtok_r(NULL, " ", &saveptr);
 
     if (streq(data, red))
@@ -61,7 +63,6 @@ static inline bool check_pick(char *str)
     return false;
 }
 
-
 static inline bool check_set(char *set_data)
 {
     char *saveptr;
@@ -74,7 +75,6 @@ static inline bool check_set(char *set_data)
 
         pick_data = strtok_r(NULL, PICK_DELIM, &saveptr);
     }
-
 
     return true;
 }
